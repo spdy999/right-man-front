@@ -1,6 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
+// import ApolloClient from 'apollo-boost';
 import './App.css';
+
+// const client = new ApolloClient({
+//   uri: 'localhost:5000/graphql',
+// });
+
+// const App = () => {};
 
 const App: React.FC = () => {
   return (
@@ -21,6 +28,6 @@ const App: React.FC = () => {
       </header>
     </div>
   );
-}
+};
 
 export default App;
