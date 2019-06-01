@@ -14,7 +14,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "noImplicitAny": false
   },
   "include": ["**/*.ts", "**/*.tsx", "src"],
   "exclude": ["node_modules"]

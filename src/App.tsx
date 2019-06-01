@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PokemonSearch from './components/PokemonSearch';
 import { ApolloProvider } from 'react-apollo';
 import './App.css';
 import ApolloClient from 'apollo-boost';
