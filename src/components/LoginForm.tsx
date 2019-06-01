@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class LoginForm extends React.Component {
+class LoginForm extends Component {
   render() {
     return (
       <section className="section container">
@@ -8,9 +8,9 @@ class LoginForm extends React.Component {
           <div className="column is-half">
             <form>
               <div className="field">
-                <label className="label">Email</label>
+                <label className="label">Username</label>
                 <div className="control">
-                  <input className="input" type="email" name="email" />
+                  <input className="input" type="username" name="username" />
                 </div>
               </div>
 
