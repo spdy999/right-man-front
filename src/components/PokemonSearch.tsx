@@ -23,7 +23,7 @@ export class PokemonSearch extends Component<User, SearchState> {
     };
     this.pokemonRef = React.createRef();
   }
-  onSearchClick = () => {
+  onSearchClick = (): void => {
     const inputValue = this.pokemonRef.current.value;
     fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}`).then(res => {
       if (res.status !== 200) {
@@ -43,6 +43,11 @@ export class PokemonSearch extends Component<User, SearchState> {
       });
     });
   };
+
+  addNumbers = (a: number, b: number): number => {
+    return a + b;
+  };
+
   render() {
     const { name: userName, numberOfPokemons } = this.props;
     const { error, pokemon } = this.state;
