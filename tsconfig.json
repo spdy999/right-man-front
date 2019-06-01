@@ -13,7 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "strictNullChecks": false
   },
   "include": ["**/*.ts", "**/*.tsx", "src"],
   "exclude": ["node_modules"]
