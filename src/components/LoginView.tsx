@@ -78,8 +78,8 @@ export class LoginView extends Component<RouteComponentProps<{}>> {
                     console.log('login');
                     const response = await login({ variables: this.state });
                     const token = response.data.login.token;
-                    console.log(token);
                     localStorage.setItem(AUTH_TOKEN, token);
+                    console.log('setItem', AUTH_TOKEN, token);
                     this.props.history.push('/me');
                   } catch (error) {
                     console.log('error');
