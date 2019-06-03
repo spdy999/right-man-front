@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
+import ProductView from './ProductView';
 
 const meQuery = gql`
   query MeQuery {
@@ -24,7 +25,13 @@ export class MeView extends Component {
           if (!data.me) {
             return <div>receive no user</div>;
           }
-          return <div>Hello {data.me.email}</div>;
+          // return (<div>Hello {data.me.email}</div><div><ProductView/></div>);
+          return (
+            <Fragment>
+              <div>Hello {data.me.email}</div>
+              <ProductView />
+            </Fragment>
+          );
         }}
       </Query>
     );
