@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import { RouteComponentProps } from 'react-router-dom';
+import { AUTH_TOKEN } from '../constant';
 
 // interface LoginMutationVariables {
 //   email: string;
@@ -43,7 +44,7 @@ export class LoginView extends Component<RouteComponentProps<{}>> {
     const { email, password } = this.state;
     return (
       <Mutation mutation={loginMutation}>
-        {(login, result) => (
+        {login => (
           <div
             style={{
               display: 'flex',
@@ -74,12 +75,15 @@ export class LoginView extends Component<RouteComponentProps<{}>> {
               <button
                 onClick={async () => {
                   try {
-                    console.log('registered');
+                    console.log('login');
                     const response = await login({ variables: this.state });
-                    console.log(response);
+                    const token = response.data.login.token;
+                    console.log(token);
+                    localStorage.setItem(AUTH_TOKEN, token);
                     this.props.history.push('/me');
                   } catch (error) {
                     console.log('error');
+                    console.log(error);
                   }
                 }}
               >
