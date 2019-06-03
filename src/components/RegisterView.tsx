@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import { RouteComponentProps } from 'react-router-dom';
-import { async } from 'q';
 
 const registerMutation = gql`
   mutation RegisterMutation($email: String!, $password: String!) {
@@ -12,7 +11,7 @@ const registerMutation = gql`
     }
   }
 `;
-// fix this.props.history
+// fix this.props.history using RouteComponentProps
 export class RegisterView extends Component<RouteComponentProps<{}>> {
   state = {
     email: '',

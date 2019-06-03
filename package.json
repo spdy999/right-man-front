@@ -46,6 +46,6 @@
   "devDependencies": {
     "@types/material-ui": "^0.21.6",
     "@types/react-router-dom": "^4.3.3",
-    "apollo": "^2.12.5"
+    "apollo": "^1.9.2"
   }
 }
