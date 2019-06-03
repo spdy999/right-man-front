@@ -80,11 +80,11 @@ export class LoginView extends Component<RouteComponentProps<{}>> {
                     const token = response.data.login.token;
                     localStorage.setItem(AUTH_TOKEN, token);
                     console.log('setItem', AUTH_TOKEN, token);
-                    this.props.history.push('/me');
                   } catch (error) {
                     console.log('error');
                     console.log(error);
                   }
+                  this.props.history.push('/me');
                 }}
               >
                 login

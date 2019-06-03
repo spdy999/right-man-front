@@ -24,7 +24,7 @@ export class MeView extends Component {
           if (!data.me) {
             return <div>receive no user</div>;
           }
-          return <div>{data.me.email}</div>;
+          return <div>Hello {data.me.email}</div>;
         }}
       </Query>
     );
