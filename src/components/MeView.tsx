@@ -6,7 +6,12 @@ import ProductView from './ProductView';
 const meQuery = gql`
   query MeQuery {
     me {
+      id
       email
+      products {
+        id
+        name
+      }
     }
   }
 `;
@@ -29,7 +34,7 @@ export class MeView extends Component {
           return (
             <Fragment>
               <div>Hello {data.me.email}</div>
-              <ProductView />
+              <ProductView products={data.me.products} />
             </Fragment>
           );
         }}
